@@ -2,19 +2,24 @@
 
 Stack::Stack() {}
 
-void Stack::add_top(const Cube& cube)
+void Stack::add_top(Cube cube)
 {
-    return;
+    cubes_.push_back(cube);
 }
 
-Cube Stack::remove_top()
+void Stack::remove_top()
 {
-    return Cube(0);
+    return cubes_.pop_back();
 }
 
-Cube& Stack::peek_top() const
+const Cube& Stack::peek_top() const
 {
-    return Cube(0);
+    return cubes_.back();
+}
+
+std::vector<Cube> Stack::getCubes()
+{
+    return cubes_;
 }
 
 unsigned Stack::size() const
