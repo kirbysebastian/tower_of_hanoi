@@ -33,6 +33,7 @@ The minimal number of moves required to solve a Tower of Hanoi puzzle is 2n − 
 ## TODOs
 - ~~Create a bash install script~~
 - Create unit tests
+- Setup travis-ci
 - Dynamic solution solver
 - Game problem creator
 
