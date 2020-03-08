@@ -35,3 +35,6 @@ The minimal number of moves required to solve a Tower of Hanoi puzzle is 2n − 
 - Create unit tests
 - Dynamic solution solver
 - Game problem creator
+
+## References
+- ![Wikipedia](https://en.wikipedia.org/wiki/Tower_of_Hanoi)
