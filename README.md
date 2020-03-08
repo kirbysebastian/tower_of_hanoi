@@ -1,4 +1,4 @@
-# tower_of_hanoi
+# Tower Of Hanoi Problem
 C++ program solving the problem, tower of hanoi
 
 
