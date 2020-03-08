@@ -2,6 +2,11 @@
 
 Stack::Stack() {}
 
+Stack::Stack(const Stack& stack)
+{
+    cubes_ = stack.getCubes();
+}
+
 void Stack::add_top(Cube cube)
 {
     cubes_.push_back(cube);
@@ -17,13 +22,13 @@ const Cube& Stack::peek_top() const
     return cubes_.back();
 }
 
-std::vector<Cube> Stack::getCubes()
+const std::vector<Cube>& Stack::getCubes() const
 {
     return cubes_;
 }
 
 unsigned Stack::size() const
 {
-    return 0;
+    return cubes_.size();
 }
 

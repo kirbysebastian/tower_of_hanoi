@@ -7,12 +7,13 @@ class Stack
 {
 public:
     Stack();
+    Stack(const Stack&);
 
     void add_top(Cube cube);
     void remove_top();
     const Cube& peek_top() const;
 
-    std::vector<Cube> getCubes();
+    const std::vector<Cube>& getCubes() const;
     unsigned size() const;
 
 private:

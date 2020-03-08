@@ -4,6 +4,8 @@
 int main()
 {
     Game g(3);
-    std::cout << g << std::endl;
+    std::cout << "Initial game state.\n" << g << std::endl;
+    g.solve();
+    std::cout << std::endl << "Game solved!\n" << g << std::endl;
     return 0;
 }

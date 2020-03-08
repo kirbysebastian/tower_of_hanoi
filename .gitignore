@@ -1,3 +1,4 @@
 *.o
 *.swp
+logs.txt
 build/

@@ -8,17 +8,18 @@ class Game
 public:
     Game(const unsigned&);
 
-    void solve() const;
-    std::vector<Stack> getStacks();
+    void solve();
+    const std::vector<Stack>& getStacks() const;
 
     friend std::ostream& operator<<(std::ostream& os, Game& game)
     {
         for (auto& stack : game.getStacks())
         {
             os << "Stack:\n";
-            for (auto& cube : stack.getCubes())
+            const auto& cubes = stack.getCubes();
+            for (auto iter = cubes.rbegin(); iter != cubes.rend(); ++iter)
             {
-                os << "\t" << cube << "\n";
+                os << "\t" << iter->getVolume() << "\n";
             }
 
             os << "\n\n";
@@ -28,6 +29,7 @@ public:
     }
 private:
     void generateStacks();
+    void move(unsigned, unsigned);
 
     unsigned stackCount_;
     std::vector<Stack> stacks_;
